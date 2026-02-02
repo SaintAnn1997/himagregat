@@ -1,0 +1,64 @@
+@use '../vars' as *;
+
+.socials-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        background-color: $accent-color;
+        transition: all .3s;
+        padding: 10px;
+
+        svg {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            background-color: transparent;
+            
+            svg path {
+                stroke: $accent-color;
+                fill: $accent-color;
+            }
+        }
+        
+    }
+
+}
+
+@media(max-width: 640px) {
+    .socials-block {
+        a {
+            width: 35px;
+            height: 35px;
+            padding: 5.93px 6.93px 6.93px 5.93px;
+        }
+    }
+}
+
+@media(max-width: 430px) {
+    .socials-block {
+        a {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media(max-width: 375px) {
+    .socials-block {
+        a {
+            width: 21px;
+            height: 21px;
+            padding: 5px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use 'vars' as *;
+
+
+// Политика конфиденциальности
+.lwpcngNoticeBar-bottom.lwpcngNotice-sticked {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+@media(max-width: 768px) {
+    .informer-custom {
+        display: block;
+        width: max-content;
+        margin: 15px auto;
+    }
+}

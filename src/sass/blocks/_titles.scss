@@ -1,0 +1,17 @@
+@use '../vars' as *;
+
+h1 {
+    // font-size: 48px;
+    font-size: clamp(1.5rem, 1rem + 2.22vw, 3rem);
+    font-weight: $fw-semibold;
+    line-height: $lh-normal;
+    text-transform: uppercase;
+    color: $secondary-color;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: $lh-normal;
+    color: $primary-color;
+}

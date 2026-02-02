@@ -1,0 +1,30 @@
+<?php
+$title = get_field('materials-chart-title');
+$items = get_field('materials-chart-items'); 
+$note = get_field('materials-chart-note');
+?>
+<div class="chart" aria-label="<?php echo esc_attr($note); ?>">
+    <?php if (!empty($title)) : ?>
+    <div class="chart__head">
+        <h3><?php echo esc_html($title); ?></h3>
+    </div>
+    <?php endif; ?>
+    <div class="chart__list">
+        <?php if (is_array($items)) : foreach ($items as $item) : ?>
+            <div class="chart__item" style="--p: <?php echo floatval($item['primary_percent'] ?? 0); ?>%; --s: <?php echo floatval($item['secondary_percent'] ?? 0); ?>%;">
+                <div class="chart__bars">
+                    <div class="chart__bar chart__bar--primary"></div>
+                    <div class="chart__bar chart__bar--secondary"></div>
+                    <div class="chart__label"><?php echo esc_html($item['materials-chart-item-title'] ?? ''); ?></div>
+                </div>
+            </div>
+        <?php endforeach; endif; ?>
+    </div>
+    <div class="chart__note">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="22" height="22" rx="11" fill="#009652" />
+            <path d="M11.5 4.86364L11.3864 13.2273H10.0682L9.95455 4.86364H11.5ZM10.7273 16.5909C10.447 16.5909 10.2064 16.4905 10.0057 16.2898C9.80492 16.089 9.70455 15.8485 9.70455 15.5682C9.70455 15.2879 9.80492 15.0473 10.0057 14.8466C10.2064 14.6458 10.447 14.5455 10.7273 14.5455C11.0076 14.5455 11.2481 14.6458 11.4489 14.8466C11.6496 15.0473 11.75 15.2879 11.75 15.5682C11.75 15.7538 11.7027 15.9242 11.608 16.0795C11.517 16.2348 11.3939 16.3598 11.2386 16.4545C11.0871 16.5455 10.9167 16.5909 10.7273 16.5909Z" fill="white" />
+        </svg>
+        <?php echo esc_html($note); ?>
+    </div>
+</div>

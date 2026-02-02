@@ -1,0 +1,36 @@
+{
+  "assets/icons/adress-icon.svg": {
+    "file": "assets/icons/adress-icon.svg",
+    "src": "assets/icons/adress-icon.svg"
+  },
+  "assets/icons/geo-icon.svg": {
+    "file": "assets/icons/geo-icon.svg",
+    "src": "assets/icons/geo-icon.svg"
+  },
+  "assets/icons/mail-icon.svg": {
+    "file": "assets/icons/mail-icon.svg",
+    "src": "assets/icons/mail-icon.svg"
+  },
+  "assets/icons/notice-icon.svg": {
+    "file": "assets/icons/notice-icon.svg",
+    "src": "assets/icons/notice-icon.svg"
+  },
+  "assets/icons/tel-icon.svg": {
+    "file": "assets/icons/tel-icon.svg",
+    "src": "assets/icons/tel-icon.svg"
+  },
+  "js/main.js": {
+    "file": "assets/js/main.Qthly-J2.js",
+    "name": "main",
+    "src": "js/main.js",
+    "isEntry": true
+  },
+  "sass/style.scss": {
+    "file": "assets/css/style.B6rJYnfr.css",
+    "src": "sass/style.scss",
+    "isEntry": true,
+    "names": [
+      "style.css"
+    ]
+  }
+}

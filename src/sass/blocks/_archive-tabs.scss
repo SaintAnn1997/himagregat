@@ -1,0 +1,126 @@
+@use '../vars' as *;
+
+.archive-tabs {
+    position: relative;
+    overflow: hidden;
+    margin: 25px auto;
+    margin-bottom: 0;
+
+    &__wrapper {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch; // плавный скролл на iOS
+        scrollbar-width: none; // Firefox
+        -ms-overflow-style: none; // IE/Edge
+
+        // Скрываем скроллбар
+        &::-webkit-scrollbar {
+            display: none; // Chrome, Safari
+        }
+
+        // padding: 0 15px 0 5px;
+        // margin: 0 -15px;
+    }
+
+    &__item {
+        display: block;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-weight: $fw-regular;
+        color: rgba($color: $dark-color, $alpha: 50%);
+        border: none;
+        background-color: transparent;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        padding: 4px 6px;
+
+        &--active {
+            background-color: $accent-color;
+            color: $secondary-color;
+        }
+    }
+
+    &__line {
+        position: relative;
+        max-width: 1160px;
+        overflow: hidden;
+        border: none;
+        color: $accent-color;
+        background-color: $accent-color;
+        height: 1px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 25px;
+        top: 0;
+        right: 0;
+        background: linear-gradient(to left, #ffffff 0%, transparent 40%);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    &--journal &__item {
+        padding: 10px 15px;
+    }
+
+}
+
+.js-tabs-content {
+    display: none;
+}
+
+.js-tabs-content--active {
+    display: block;
+}
+
+@media (max-width: 430px) {
+
+    .archive-tabs {
+        margin: 15px auto;
+        margin-bottom: 0;
+
+        .container {
+            padding: 0;
+        }
+
+        &__wrapper {
+            gap: 5px;
+            padding: 0 25px;
+        }
+
+        &__line {
+            margin: -0.5px auto;
+            margin-left: 25px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 38px;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right, #ffffff 24%, transparent 21%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        &.has-active-first::before {
+            background: linear-gradient(to right, #ffffff 24%, transparent 21%);
+        }
+
+        &.has-active-last::after {
+            background: unset
+        }
+
+    }
+
+}

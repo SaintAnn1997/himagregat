@@ -1,0 +1,98 @@
+@use '../vars' as *;
+
+.subscription-form {
+    background: #E9E9E9;
+    padding: 30px 40px 30px 40px;
+    margin-top: 40px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        color: $accent-color;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__label-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: #373435;
+
+        .required {
+            color: #dc3545;
+            font-weight: 600;
+        }
+    }
+
+    &__input {
+        font-size: 16px;
+        border: 1px solid #d1d5db;
+        background: #fff;
+        padding: 12px 16px;
+
+        &:focus {
+            outline: none;
+            border-color: $accent-color;
+            box-shadow: 0 0 0 3px rgba(0, 150, 82, 0.1);
+        }
+
+        &::placeholder {
+            color: #9ca3af;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+
+    &__note {
+        font-size: 14px;
+        color: #6b7280;
+
+        .required {
+            color: #dc3545;
+            font-weight: 600;
+        }
+    }
+
+    &__submit {
+        padding: 14px 32px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px 20px;
+
+        &__title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__submit {
+            width: 100%;
+        }
+    }
+}

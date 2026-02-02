@@ -1,0 +1,84 @@
+.chart {
+    margin: 40px 0;
+}
+
+.chart__head {
+    margin-bottom: 18px;
+}
+
+.chart__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chart__item {
+    --p: 0%;
+    --s: 0%;
+}
+
+.chart__bars {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.chart__bar {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    white-space: nowrap;
+}
+
+.chart__bar--primary {
+    background: #009652;
+    width: var(--p);
+}
+
+.chart__bar--secondary {
+    background: #00965229;
+    width: var(--s);
+}
+
+.chart__label {
+    background: linear-gradient(90deg, #fff var(--p), #373435 0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    inset: 0;
+    padding-left: 20px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.chart__label,
+.chart__note {
+    align-items: center;
+    display: flex;
+    font-weight: 400;
+}
+
+.chart__note {
+    color: #37343580;
+    font-size: 14px;
+    gap: 12px;
+    margin: 15px 0 0 20px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.chart__note svg {
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 23px;
+}
+
+@media(max-width:430px) {
+    .chart__note {
+        margin: 15px 0 0 10px;
+    }
+}

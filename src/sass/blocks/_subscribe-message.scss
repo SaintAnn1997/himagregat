@@ -1,0 +1,76 @@
+.subscribe-block__message {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.subscribe-block__message--visible {
+    display: flex;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.subscribe-block__message-content {
+    position: relative;
+    min-width: 320px;
+    max-width: 90vw;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    padding: 36px 32px 28px 32px;
+}
+
+.subscribe-block__message-close {
+    position: absolute;
+    font-size: 30px;
+    line-height: normal;
+    color: #888;
+    background-color: transparent;
+    border: none;
+    right: 16px;
+    top: 3px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.subscribe-block__message-close:hover {
+    color: #e74c3c;
+}
+
+.subscribe-block__message-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #373435;
+}
+
+.subscribe-block__message-text {
+    font-size: 1.1rem;
+    color: #373435;
+    margin-bottom: 8px;
+}
+
+.subscribe-block__message--success .subscribe-block__message-content {
+    border-left: 6px solid #009652;
+}
+
+.subscribe-block__message--error .subscribe-block__message-content {
+    border-left: 6px solid #e74c3c;
+}

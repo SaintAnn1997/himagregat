@@ -1,0 +1,45 @@
+@use 'libs/bootstrap-reboot.min' as *;
+@use 'vars' as *;
+
+@use 'global';
+@use 'general';
+
+@use "blocks/titles";
+@use 'blocks/btns';
+@use "blocks/burger";
+@use "blocks/page-header";
+@use "blocks/breadcrumbs";
+@use "blocks/pagination";
+@use "blocks/socials-block";
+@use "blocks/subscribe-block";
+@use 'blocks/widget-banner-min';
+@use 'blocks/journal-notice';
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/articles-tag';
+@use 'blocks/hero-block';
+@use "blocks/section-header";
+@use 'blocks/archive-tabs';
+@use 'blocks/archive-section';
+@use 'blocks/archive-news';
+@use 'blocks/analytics-section';
+@use 'blocks/journal-section';
+@use 'blocks/single-page.scss';
+@use 'blocks/single-event';
+@use 'blocks/search-results';
+@use 'blocks/widget-events';
+@use 'blocks/widget-catalog';
+@use 'blocks/widget-subscribe';
+@use 'blocks/widget-contacts';
+@use 'blocks/info-section';
+@use 'blocks/subscription-form';
+@use 'blocks/subscribe-message';
+@use 'blocks/chart';
+@use 'blocks/table';
+@use 'blocks/expert-opinion';
+@use 'blocks/overlay';
+
+
+
+
+

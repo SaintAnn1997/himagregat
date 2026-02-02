@@ -1,0 +1,63 @@
+@use 'sass:color';
+@use '../vars' as *;
+
+.btn {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 310px;
+    font-size: 18px;
+    font-weight: $fw-regular;
+    color: $secondary-color;
+    border: 1px solid $accent-color;
+    background-color: $accent-color;
+    transition: all .3s;
+    cursor: pointer;
+    padding: 21.5px 34.87px 20.87px 23.5px;
+
+    svg {
+        position: relative;
+        display: block;
+        width: 23px;
+        height: 23px;
+        transition: transform 0.3s ease;
+        z-index: 2;
+    }
+
+    &:hover {
+        color: $accent-color !important;
+        background-color: transparent !important;
+    }
+
+    &__min {
+        width: 46px;
+        height: 46px;
+        padding: 9px 9.5px 9px 8.5px;
+    }
+
+}
+
+// Стили для кнопок WordPress Gutenberg
+.wp-block-button {
+    
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: $fw-regular;
+        color: $secondary-color !important;
+        border: 1px solid $accent-color !important;
+        background-color: $accent-color !important;
+        transition: all .3s;
+        cursor: pointer;
+        padding: 21.5px 34.87px 20.87px 23.5px;
+        text-decoration: none;
+
+        &:hover {
+            color: $accent-color !important;
+            background-color: transparent !important;
+        }
+    }
+}

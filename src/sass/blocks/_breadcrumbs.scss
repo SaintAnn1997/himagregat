@@ -1,0 +1,43 @@
+@use '../vars' as *;
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+
+    svg {
+        width: 7px;
+        height: 10px;
+        flex-shrink: 0;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: $fw-regular;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &--active {
+            color: rgba($color: $dark-color, $alpha: 50%);
+        }
+
+        &:last-child {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    }
+
+
+}
+
+@media(max-width: 430px) {
+
+    .breadcrumbs {
+        justify-content: center;
+        margin: 15px auto;
+    }
+
+}

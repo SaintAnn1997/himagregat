@@ -1,0 +1,136 @@
+@use '../vars' as *;
+
+.table {
+    margin-top: 40px;
+
+    &__wrapper {
+        overflow: auto hidden;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 102.2%;
+        border-collapse: separate;
+        border-spacing: 10px;
+        margin-left: -9px;
+    }
+
+    thead {
+        background: #E8F5EE;
+    }
+
+    th {
+        text-align: left;
+        font-weight: $fw-regular;
+        color: #373435;
+        padding: 10px 10px 10px 20px;
+    }
+
+    tbody {
+        td {
+            font-size: 16px;
+            font-weight: $fw-regular;
+            border: 1px solid #E2E2E2;
+            padding: 10px 10px 10px 20px;
+        }
+    }
+}
+
+// Стили для Gutenberg-таблиц (wp-block-table)
+.wp-block-table,
+.wp-block-table table {
+    width: 102.5%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin-left: -5px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+}
+
+.wp-block-table thead {
+    background: #E8F5EE;
+}
+
+.wp-block-table th {
+    text-align: left;
+    font-weight: $fw-regular;
+    border: none;
+    color: #373435;
+    padding: 10px 10px 10px 20px;
+}
+
+.wp-block-table tbody td {
+    font-size: 16px;
+    font-weight: $fw-regular;
+    border: 1px solid #E2E2E2;
+    padding: 10px 10px 10px 20px;
+}
+
+// Поддержка overflow для figure.table__wrapper и figure.wp-block-table (Gutenberg)
+figure.table__wrapper,
+figure.wp-block-table {
+    overflow: auto hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .table {
+
+        th {
+            font-size: 14px;
+        }
+
+        table {
+            width: max-content;
+        }
+
+        td {
+            width: 260px;
+        }
+
+        tbody {
+            td {
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .wp-block-table {
+        th {
+            font-size: 14px;
+        }
+
+        table {
+            width: max-content;
+        }
+
+        td {
+            width: 260px;
+        }
+
+        tbody {
+            td {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .wp-block-table .has-fixed-layout {
+        width: max-content;
+    }
+}

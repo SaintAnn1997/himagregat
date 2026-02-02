@@ -1,0 +1,93 @@
+@use '../vars' as *;
+
+.chart {
+    margin: 40px 0;
+
+    &__head {
+        margin-bottom: 18px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__item {
+        /* ширина зелёной части */
+        --p: 0%;
+
+        /* ширина светло-зеленой части */
+        --s: 0%;
+    }
+
+    &__bars {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    &__bar {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    &__bar--primary {
+        width: var(--p);
+        background: $accent-color;
+    }
+
+    &__bar--secondary {
+        width: var(--s);
+        background: rgba($accent-color, 0.16);
+    }
+
+    &__label {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: $fw-regular;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        padding-left: 20px;
+        background: linear-gradient(90deg, #fff var(--p), rgba($primary-color, 1) 0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__note {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        font-weight: $fw-regular;
+        color: rgba($primary-color, 50%);
+        padding-left: 35px;
+        margin: 15px 0 0 20px;
+
+        svg {
+            position: absolute;
+            width: 23px;
+            height: 22px;
+            top: -2px;
+            left: 0;
+        }
+    }
+
+}
+
+@media (max-width: 430px) {
+    .chart {
+
+        &__note {
+            margin: 15px 0 0 10px;
+        }
+
+    }
+}

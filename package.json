@@ -1,0 +1,66 @@
+{
+  "name": "khimagregati",
+  "version": "1.0.0",
+  "description": "WordPress theme for KhimAgregati",
+  "main": "index.js",
+  "author": "Automattic Theme Team",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Automattic/_s#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Automattic/_s.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Automattic/_s/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass:watch": "sass --watch src/sass:src/assets/css",
+    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^19.2.2",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "dir-archiver": "^1.1.1",
+    "glob": "^11.0.3",
+    "imagemin": "^9.0.1",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.5.6",
+    "postcss-replace": "^2.0.1",
+    "rtlcss": "^3.5.0",
+    "sass": "^1.93.2",
+    "unplugin-imagemin": "^0.6.9",
+    "vite": "^7.1.10",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-static-copy": "^3.1.4"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  }
+}

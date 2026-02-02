@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "khag/info-section",
+    "title": "Список преимуществ с иконкой",
+    "description": "Список преимуществ с иконкой",
+    "category": "widgets",
+    "icon": "info",
+    "keywords": [
+        "преимущества",
+        "список",
+        "инфо"
+    ],
+    "supports": {
+        "anchor": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php",
+        "blockVersion": 3
+    },
+    "editorStyle": "file:./editor.css"
+}

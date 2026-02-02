@@ -1,0 +1,131 @@
+@use '../vars' as *;
+
+.hero {
+    &__inner {
+        position: relative;
+        padding: 78.5px 0 78.5px 41px;
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        user-select: none;
+        z-index: -1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 150, 82, 0.4);
+            pointer-events: none;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        filter: grayscale(100%) brightness(.4);
+    }
+
+    &__title {
+        font-weight: 800;
+
+        a {
+            color: $secondary-color;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+
+    &__descr {
+        width: 100%;
+        max-width: 645px;
+        // font-size: 24px;
+        font-size: clamp(1rem, 0.833rem + 0.74vw, 1.5rem);
+        font-weight: 400;
+        color: $secondary-color;
+        margin-top: 55px;
+    }
+
+    &__btn {
+        margin-top: 62px;
+
+        &:hover {
+            color: $accent-color;
+            background-color: $secondary-color !important;
+            border: 1px solid $secondary-color;
+
+            svg path {
+                stroke: $accent-color;
+            }
+        }
+
+    }
+
+}
+
+@media(max-width: 430px) {
+
+    .hero {
+
+        .container {
+            padding: 0;
+        }
+
+        &__inner {
+            padding: 56px 26px 58px 26px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__descr {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        &__arrow {
+
+            &-box {
+                max-width: 96%;
+                margin: 25px auto;
+            }
+
+        }
+
+        &__btn {
+            max-width: 100%;
+            font-size: 17px;
+            margin-top: 25px;
+        }
+
+    }
+
+}
+
+@media(max-width: 375px) {
+
+    .hero {
+        &__arrow {
+
+            &-box {
+                max-width: 100%;
+            }
+
+        }
+
+    }
+
+}

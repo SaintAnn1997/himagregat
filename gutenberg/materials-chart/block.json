@@ -1,0 +1,24 @@
+{
+    "apiVersion": 3,
+    "name": "khag/materials-chart",
+    "title": "График сравнения материалов",
+    "description": "Горизонтальный график для сравнения эксплуатационных характеристик материалов.",
+    "category": "widgets",
+    "icon": "chart-bar",
+    "keywords": [
+        "график",
+        "материалы",
+        "сравнение",
+        "chart"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "gutenberg/materials-chart/render.php",
+        "blockVersion": 3
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "editorStyle": "file:./editor.css"
+}

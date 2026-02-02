@@ -1,0 +1,217 @@
+    @use '../vars' as *;
+
+    .subscribe-block {
+        margin-top: 40px;
+
+        &__wrapper {
+            display: flex;
+            gap: 45px;
+            background-color: rgba($color: $accent-color, $alpha: 15%);
+            padding: 30px 20px;
+        }
+
+        &__content {
+            width: 100%;
+            max-width: 365px;
+
+            &-title {
+                // font-size: 20px;
+                font-size: clamp(1rem, 0.917rem + 0.37vw, 1.25rem);
+                font-weight: $fw-semibold;
+            }
+
+            &-text {
+                font-size: 14px;
+                font-weight: $fw-regular;
+                margin-top: 15px;
+            }
+
+        }
+
+        &__form {
+            width: 100%;
+            display: flex;
+            gap: 15px;
+
+            &-data {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            &-inputs {
+                display: flex;
+                gap: 15px;
+            }
+
+            &-btn {
+                flex: 2;
+                width: 100%;
+                max-width: 274px;
+                padding: 22px 26px;
+            }
+
+            &-input {
+                flex: 2;
+                width: 100%;
+                max-width: 441px;
+                border: 0px;
+                -webkit-border-radius: 0px;
+                padding: 22px 21px;
+
+                &::placeholder {
+                    font-size: 16px;
+                    color: #9D9D9D;
+                }
+            }
+
+        }
+
+        &__checkbox {
+            display: flex;
+            gap: 10px;
+
+            input[type="checkbox"] {
+                position: relative;
+                flex-shrink: 0;
+                width: 17px;
+                height: 17px;
+                border: 1px solid #ccc;
+                border-radius: 0px;
+                appearance: none;
+                -webkit-appearance: none;
+                cursor: pointer;
+
+                &:checked {
+                    background-color: $accent-color;
+                    border-color: $accent-color;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 5px;
+                        top: 2px;
+                        width: 5px;
+                        height: 9px;
+                        border: solid white;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            label {
+                font-size: 12px;
+                font-weight: $fw-regular;
+                cursor: pointer;
+
+                a {
+                    color: $accent-color;
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &__honeypot {
+            position: absolute;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+
+            &-label {
+                display: block;
+                width: 100%;
+            }
+
+            input {
+                width: 100%;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+    }
+
+    @media (max-width: 992px) {
+
+        .subscribe-block {
+
+            &__wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &__form {
+                input {
+                    max-width: 633px;
+                }
+            }
+
+        }
+
+    }
+
+    @media (max-width: 640px) {
+
+        .subscribe-block {
+
+            &__wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &__form {
+                flex-direction: column;
+
+                &-input {
+                    max-width: 100%;
+                    padding: 23px 0px 23px 21px;
+                }
+
+                &-btn {
+                    max-width: 100%;
+                }
+
+            }
+
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .subscribe-block {
+            &__form {
+                &-inputs {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+
+        .subscribe-block {
+
+            &__content {
+                &-title {
+                    text-align: center;
+                }
+
+                &-text {
+                    text-align: center;
+                }
+            }
+
+            &__checkbox {
+                label {
+                    text-wrap: balance;
+                }
+            }
+
+        }
+
+    }

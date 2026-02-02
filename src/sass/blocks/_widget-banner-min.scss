@@ -1,0 +1,31 @@
+    @use '../vars' as *;
+
+    .widget-banner {
+        background-image: url('../imgs/banner-min-img.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 272px 13.5px 13px 13.5px;
+
+        &__title {
+            font-size: 20px;
+            line-height: $lh;
+            font-weight: $fw-semibold;
+            color: $secondary-color;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        &__descr {
+            font-size: 14px;
+            font-weight: $fw-regular;
+            line-height: $lh-normal;
+            color: $secondary-color;
+            margin-bottom: 15px;
+        }
+
+        &__arrow {
+            align-self: end;
+        }
+
+    }
